@@ -2,7 +2,7 @@
 
 Fix for keyboard/mouse/tablet being detected as joystick in Linux.
 
-There are several devices that, although recognized by kernel as joysticks, are not joysticks. This repository contains rules that will prevent the non-functional /dev/input/js* and /dev/input/event* devices from being used, by removing read/write permissions from them.
+There are several devices that, although recognized by kernel as joysticks, are not joysticks. This repository contains rules that will prevent the non-functional `/dev/input/js*` and `/dev/input/event*` devices from being used, by removing read/write permissions from them.
 
 This is just a blacklist, which will always be incomplete (until the actual bug gets fixed). Feel free to add more devices to this list.
 
@@ -36,7 +36,7 @@ These tools list and interact with all available/detected joysticks:
 * **pygame-joystick-test.py**
     * <https://bitbucket.org/denilsonsa/pygame-joystick-test/>
     * <https://bitbucket.org/denilsonsa/pygame-joystick-test/src/default/pygame-joystick-test.py>
-    * Uses Python 2.x and [Pygame](http://www.pygame.org/), which uses SDL.
+    * Uses Python 2.x and [Pygame](http://www.pygame.org/), which uses [SDL](https://www.libsdl.org/).
 
 ## Bug reports and mentions
 
