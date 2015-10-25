@@ -8,6 +8,11 @@ This is just a blacklist, which will always be incomplete (until the actual bug 
 
 ## How to install
 
+    sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules \
+      https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks.rules
+
+Single-line version:
+
     sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks.rules
 
 ## How it works
