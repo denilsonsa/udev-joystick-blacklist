@@ -1,74 +1,45 @@
 # /etc/udev/rules.d/51-these-are-not-joysticks.rules
-# vim: filetype=udevrules
 #
-# Look at this repository for more information:
+# This file is auto-generated. For more information:
 # https://github.com/denilsonsa/udev-joystick-blacklist
 
-# Microsoft Microsoft Wireless Optical Desktop® 2.10
-# Microsoft Wireless Desktop - Comfort Edition
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="009d", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft Microsoft® Digital Media Pro Keyboard
-# Microsoft Corp. Digital Media Pro Keyboard
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b0", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft Microsoft® Digital Media Keyboard
-# Microsoft Corp. Digital Media Keyboard 1.0A
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b4", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft Microsoft® Digital Media Keyboard 3000
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0730", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft Microsoft® 2.4GHz Transceiver v6.0
-# Microsoft Microsoft® 2.4GHz Transceiver v8.0
-# Microsoft Corp. Nano Transceiver v1.0 for Bluetooth
-# Microsoft Wireless Mobile Mouse 1000
-# Microsoft Wireless Desktop 3000
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0745", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft Corp. Wired Keyboard 600
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0750", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft Corp. Sidewinder X4 keyboard
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0768", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft® 2.4GHz Transceiver v9.0
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07a5", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft® Nano Transceiver v1.0
-# Microsoft Wireless Keyboard 800
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07b2", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Microsoft® Nano Transceiver v2.0
-SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0800", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# WACOM CTE-640-U V4.0-3
-# Wacom Co., Ltd Graphire 4 6x8
-SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0016", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Wacom Bamboo Pen and Touch CTH-460
-SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# A4 Tech Co., G7 750 mouse
-SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="054f", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# A4 Tech Co., Ltd Bloody RT7 Terminator Wireless
-SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="3997", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Modecom MC-5006 Keyboard
-SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="51f4", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# A4 Tech Co., Ltd Bloody V5
-SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="7b22", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# A4 Tech Co., Ltd X-718BK Oscar Optical Gaming Mouse
-SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="8090", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# A4 Tech Co., Ltd XL-750BK Laser Mouse
-SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9090", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# A4 Tech Co., Sharkoon Fireglider Optical
-SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9066", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
-
-# Cooler Master Storm Mizar Mouse
-SUBSYSTEM=="input", ATTRS{idVendor}=="2516", ATTRS{idProduct}=="001f", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="009d", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="009d", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b0", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b0", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b4", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b4", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0730", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0730", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0745", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0745", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0750", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0750", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0768", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0768", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07a5", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07a5", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07b2", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07b2", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0800", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0800", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0016", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0016", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="054f", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="054f", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="3997", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="3997", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="51f4", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="51f4", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="7b22", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="7b22", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="8090", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="8090", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9090", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9090", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9066", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9066", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="2516", ATTRS{idProduct}=="001f", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="2516", ATTRS{idProduct}=="001f", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
