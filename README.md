@@ -18,7 +18,25 @@ Clearing `ID_INPUT_JOYSTICK` prevents some `/lib/udev/rules.d/*` rules from runn
 
 It is not possible to rename a device, so `NAME="not-a-joystick%n"` does not work.
 
-There is a nice (but outdated) udev tutoral at <http://www.reactivated.net/writing_udev_rules.html>.
+### Learning more about udev rules
+
+* Nice (but outdated) udev tutorial: <http://www.reactivated.net/writing_udev_rules.html>.
+* Debugging udev rules: <http://www.jpichon.net/blog/2011/12/debugging-udev-rules/>.
+* Monitoring and debugging kernel and udev events: `udevadm monitor -p`
+* Documentation: <http://www.freedesktop.org/software/systemd/man/udev.html> (and also the manpages installed on your system).
+
+## Testing joystick detection
+
+These tools list and interact with all available/detected joysticks:
+
+* **jstest-gtk**
+    * <https://github.com/Grumbel/jstest-gtk/>
+    * [Directly interacts with `/dev/input/js*` devices. No library is used.](https://github.com/Grumbel/jstest-gtk/blob/2355f44f571a6d5f4ff4dfaf3a27ee223fb91ed7/src/joystick.cpp#L43)
+    * [Detects up to 32 devices with `/dev/input/js*` path.](https://github.com/Grumbel/jstest-gtk/blob/2355f44f571a6d5f4ff4dfaf3a27ee223fb91ed7/src/joystick.cpp#L132)
+* **pygame-joystick-test.py**
+    * <https://bitbucket.org/denilsonsa/pygame-joystick-test/>
+    * <https://bitbucket.org/denilsonsa/pygame-joystick-test/src/default/pygame-joystick-test.py>
+    * Uses Python 2.x and [Pygame](http://www.pygame.org/), which uses SDL.
 
 ## Bug reports and mentions
 
