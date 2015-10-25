@@ -1,0 +1,108 @@
+# /etc/udev/rules.d/51-these-are-not-joysticks.rules
+# https://gist.github.com/denilsonsa/978f1d842cf5430f57f6
+#
+# These are devices that, although recognized by kernel as joysticks, are not
+# joysticks. These rules will prevent the non-functional /dev/input/js* and
+# /dev/input/event* devices from being used, by removing read/write permissions
+# from them.
+#
+# This is just a blacklist, which will always be incomplete (until the actual
+# bug gets fixed). Feel free to add more devices to this list.
+#
+#
+# MODE="0000" prevents the device from being used.
+#
+# Clearing ID_INPUT_JOYSTICK prevents some /lib/udev/rules.d/* rules from running.
+#
+# It is not possible to rename a device, so NAME="not-a-joystick%n" does not work.
+#
+#
+# HOW TO INSTALL:
+#
+# sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules https://gist.githubusercontent.com/denilsonsa/978f1d842cf5430f57f6/raw
+#
+#
+# There are several reports of this issue on several distros and on the Linux kernel:
+# https://bugzilla.kernel.org/show_bug.cgi?id=28912
+# https://bugzilla.kernel.org/show_bug.cgi?id=37982
+# https://bugs.launchpad.net/ubuntu/+source/linux/+bug/390959
+# https://askubuntu.com/questions/173376/how-do-i-disable-joystick-input
+# https://ryort.wordpress.com/2011/12/04/udev-and-the-microsoft-digital-media-keyboard-3000-wha/
+# https://forum.manjaro.org/index.php?topic=15275.msg144519#msg144519
+# https://bbs.archlinux.org/viewtopic.php?id=190485
+# https://bbs.archlinux.org/viewtopic.php?id=142469
+# https://forums.gentoo.org/viewtopic-t-362032.html
+# https://bugs.winehq.org/show_bug.cgi?id=35954
+# https://github.com/ValveSoftware/steam-for-linux/issues/3943
+#
+# A nice (but outdated) udev tutoral:
+# http://www.reactivated.net/writing_udev_rules.html
+
+# Microsoft Microsoft Wireless Optical Desktop® 2.10
+# Microsoft Wireless Desktop - Comfort Edition
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="009d", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft Microsoft® Digital Media Pro Keyboard
+# Microsoft Corp. Digital Media Pro Keyboard
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b0", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft Microsoft® Digital Media Keyboard
+# Microsoft Corp. Digital Media Keyboard 1.0A
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b4", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft Microsoft® Digital Media Keyboard 3000
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0730", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft Microsoft® 2.4GHz Transceiver v6.0
+# Microsoft Microsoft® 2.4GHz Transceiver v8.0
+# Microsoft Corp. Nano Transceiver v1.0 for Bluetooth
+# Microsoft Wireless Mobile Mouse 1000
+# Microsoft Wireless Desktop 3000
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0745", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft Corp. Wired Keyboard 600
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0750", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft Corp. Sidewinder X4 keyboard
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0768", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft® 2.4GHz Transceiver v9.0
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07a5", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft® Nano Transceiver v1.0
+# Microsoft Wireless Keyboard 800
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="07b2", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Microsoft® Nano Transceiver v2.0
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0800", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# WACOM CTE-640-U V4.0-3
+# Wacom Co., Ltd Graphire 4 6x8
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0016", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Wacom Bamboo Pen and Touch CTH-460
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# A4 Tech Co., G7 750 mouse
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="054f", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# A4 Tech Co., Ltd Bloody RT7 Terminator Wireless
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="3997", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Modecom MC-5006 Keyboard
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="51f4", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# A4 Tech Co., Ltd Bloody V5
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="7b22", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# A4 Tech Co., Ltd X-718BK Oscar Optical Gaming Mouse
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="8090", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# A4 Tech Co., Ltd XL-750BK Laser Mouse
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9090", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# A4 Tech Co., Sharkoon Fireglider Optical
+SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="9066", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+
+# Cooler Master Storm Mizar Mouse
+SUBSYSTEM=="input", ATTRS{idVendor}=="2516", ATTRS{idProduct}=="001f", ENV{ID_INPUT_JOYSTICK}=="1", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
