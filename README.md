@@ -22,7 +22,7 @@ Single-line version:
 A rule will match if:
 
 * The subsystem is `input`;
-* The `idVendor`/`idProduct` is in this list;
+* The pair `idVendor` and `idProduct` is in this list;
 * Either one of:
     * The device property `ID_INPUT_JOYSTICK` is set;
     * Or the device name matches `js[0-9]*`.
@@ -64,7 +64,7 @@ These tools list and interact with all available/detected joysticks:
 
 ## Bug reports and mentions
 
-There are reports of this issue on different distros.
+There are reports of this issue on different distros and projects.
 
 * <https://bugzilla.kernel.org/show_bug.cgi?id=28912>
 * <https://bugzilla.kernel.org/show_bug.cgi?id=37982>
@@ -91,21 +91,21 @@ For the complete list, look at [`generate_rules.py`](generate_rules.py) script.
 
 The best ways to contribute are by [creating a new issue][issues] or by [making a pull request][forking]. Make sure you mention the device name/description and the vendor/product IDs. The relevant line from `lsusb` output is usually enough.
 
-This repository contains a list of devices compiled from contributions of several people. I cannot test every single device. If something does not work for you even after you have added the correct rules, please try debugging it on your own system. The output of `udevadm monitor -p` may prove very helpful.
+This repository contains a list of devices compiled from contributions of several people. I cannot test every single device. If something does not work for you even after you have added the correct rules, please try debugging it on your own system. The output of `udevadm monitor -p` may prove very helpful. Also look at the output of `ls -l /dev/input/`.
 
 ## History of this repository
 
-After suffering with this issue for a long time, I decided to investigate possible fixes and workarounds. Then, in May 2015, after searching a lot for a solution, I've managed to create some udev rules that fixed the issue for my device, and decided to share this solution to other people. Initially, I shared [the simple file at GitHub Gist][gist]. Over time, people submitted contributions through comments, and keeping that file on Gist was becoming too hard to manage.
+After suffering with this issue for a long time, I decided to investigate possible fixes and workarounds. Then, in May 2015, after searching a lot for a solution, I've managed to create some udev rules that fixed the issue for my devices and decided to share this solution with other people. Initially, I shared [the simple file at GitHub Gist][gist]. Over time, people submitted contributions through comments, and keeping that file on Gist was becoming too hard to manage.
 
 In October 2015, I decided to move the file to [this GitHub repository][github]. That way, it will be easier to make changes, to fork, to receive notifications, and essentially to maintain it.
 
-Ideally, the bug in the Linux kernel would be fixed, so that this repository (which is essentially just a workaround) wouldn't be needed anymore.
+Ideally, the bug in the Linux kernel should be fixed, so that this repository (which is essentially just a workaround) wouldn't be needed anymore.
 
 ## License
 
 Public domain. Feel free to use this project for whatever purpose you want.
 
-Also, feel free to contribute to the project. And, if have the knowledge and the skills, consider fixing this bug in the Linux kernel itself.
+Also, feel free to contribute to the project. And, if you have the knowledge and the skills, consider fixing this bug in the Linux kernel itself.
 
 There is no warranty implied by using this project. Use at your own risk.
 
