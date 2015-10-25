@@ -1,42 +1,8 @@
 # /etc/udev/rules.d/51-these-are-not-joysticks.rules
-# https://gist.github.com/denilsonsa/978f1d842cf5430f57f6
+# vim: filetype=udevrules
 #
-# These are devices that, although recognized by kernel as joysticks, are not
-# joysticks. These rules will prevent the non-functional /dev/input/js* and
-# /dev/input/event* devices from being used, by removing read/write permissions
-# from them.
-#
-# This is just a blacklist, which will always be incomplete (until the actual
-# bug gets fixed). Feel free to add more devices to this list.
-#
-#
-# MODE="0000" prevents the device from being used.
-#
-# Clearing ID_INPUT_JOYSTICK prevents some /lib/udev/rules.d/* rules from running.
-#
-# It is not possible to rename a device, so NAME="not-a-joystick%n" does not work.
-#
-#
-# HOW TO INSTALL:
-#
-# sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules https://gist.githubusercontent.com/denilsonsa/978f1d842cf5430f57f6/raw
-#
-#
-# There are several reports of this issue on several distros and on the Linux kernel:
-# https://bugzilla.kernel.org/show_bug.cgi?id=28912
-# https://bugzilla.kernel.org/show_bug.cgi?id=37982
-# https://bugs.launchpad.net/ubuntu/+source/linux/+bug/390959
-# https://askubuntu.com/questions/173376/how-do-i-disable-joystick-input
-# https://ryort.wordpress.com/2011/12/04/udev-and-the-microsoft-digital-media-keyboard-3000-wha/
-# https://forum.manjaro.org/index.php?topic=15275.msg144519#msg144519
-# https://bbs.archlinux.org/viewtopic.php?id=190485
-# https://bbs.archlinux.org/viewtopic.php?id=142469
-# https://forums.gentoo.org/viewtopic-t-362032.html
-# https://bugs.winehq.org/show_bug.cgi?id=35954
-# https://github.com/ValveSoftware/steam-for-linux/issues/3943
-#
-# A nice (but outdated) udev tutoral:
-# http://www.reactivated.net/writing_udev_rules.html
+# Look at this repository for more information:
+# https://github.com/denilsonsa/udev-not-joystick
 
 # Microsoft Microsoft Wireless Optical Desktop® 2.10
 # Microsoft Wireless Desktop - Comfort Edition
