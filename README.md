@@ -17,18 +17,31 @@ Single-line version:
 
 ## How it works
 
-`MODE="0000"` removes read and write permissions, which prevents the device from being used.
+### Matching
 
-Clearing `ID_INPUT_JOYSTICK` prevents some `/lib/udev/rules.d/*` rules from running.
+A rule will match if:
 
-It is not possible to rename a device, so `NAME="not-a-joystick%n"` does not work.
+* The subsystem is `input`;
+* The `idVendor`/`idProduct` is in this list;
+* Either one of:
+    * The device property `ID_INPUT_JOYSTICK` is set;
+    * Or the device name matches `js[0-9]*`.
+
+### Actions
+
+The following actions are taken on each matching rule:
+
+* Removing read and write permissions by setting `MODE="0000"`. This effectively prevents the device from being used.
+* Clearing `ID_INPUT_JOYSTICK` property, which prevents some `/lib/udev/rules.d/*` rules from running.
+
+It is not possible to rename a device, so `NAME="not-a-joystick%n"` will not work.
 
 ### Learning more about udev rules
 
-* Nice (but outdated) udev tutorial: <http://www.reactivated.net/writing_udev_rules.html>.
-* Debugging udev rules: <http://www.jpichon.net/blog/2011/12/debugging-udev-rules/>.
-* Monitoring and debugging kernel and udev events: `udevadm monitor -p`
 * Documentation: <http://www.freedesktop.org/software/systemd/man/udev.html> (and also the manpages installed on your system).
+* Monitoring and debugging kernel and udev events: `udevadm monitor -p`
+* Debugging udev rules: <http://www.jpichon.net/blog/2011/12/debugging-udev-rules/>.
+* Nice (but outdated) udev tutorial: <http://www.reactivated.net/writing_udev_rules.html>.
 
 ## Testing joystick detection
 
@@ -67,11 +80,18 @@ There are reports of this issue on different distros.
 
 ## Known devices
 
-For the complete list, look at the actual udev rules.
+For the complete list, look at [`generate_rules.py`](generate_rules.py) script.
 
 * A4 Tech mouse and/or keyboard.
 * Microsoft mouse and/or keyboard.
 * Wacom tablets.
+* Cooler Master mouse.
+
+## Contributing
+
+The best ways to contribute are by [creating a new issue][issues] or by [making a pull request][forking]. Make sure you mention the device name/description and the vendor/product IDs. The relevant line from `lsusb` output is usually enough.
+
+This repository contains a list of devices compiled from contributions of several people. I cannot test every single device. If something does not work for you even after you have added the correct rules, please try debugging it on your own system. The output of `udevadm monitor -p` may prove very helpful.
 
 ## History of this repository
 
@@ -81,5 +101,16 @@ In October 2015, I decided to move the file to [this GitHub repository][github].
 
 Ideally, the bug in the Linux kernel would be fixed, so that this repository (which is essentially just a workaround) wouldn't be needed anymore.
 
+## License
+
+Public domain. Feel free to use this project for whatever purpose you want.
+
+Also, feel free to contribute to the project. And, if have the knowledge and the skills, consider fixing this bug in the Linux kernel itself.
+
+There is no warranty implied by using this project. Use at your own risk.
+
+
 [gist]: https://gist.github.com/denilsonsa/978f1d842cf5430f57f6
 [github]: https://github.com/denilsonsa/udev-joystick-blacklist
+[issues]: https://github.com/denilsonsa/udev-joystick-blacklist/issues
+[forking]: https://guides.github.com/activities/forking/
