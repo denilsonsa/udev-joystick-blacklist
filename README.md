@@ -1,4 +1,4 @@
-# udev-not-joystick
+# udev-joystick-blacklist
 
 Fix for keyboard/mouse/tablet being detected as joystick in Linux.
 
@@ -8,7 +8,7 @@ This is just a blacklist, which will always be incomplete (until the actual bug 
 
 ## How to install
 
-    sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules https://raw.githubusercontent.com/denilsonsa/udev-not-joystick/master/51-these-are-not-joysticks.rules
+    sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks.rules
 
 ## How it works
 
@@ -53,4 +53,4 @@ In October 2015, I decided to move the file to [this GitHub repository][github].
 Ideally, the bug in the Linux kernel would be fixed, so that this repository (which is essentially just a workaround) wouldn't be needed anymore.
 
 [gist]: https://gist.github.com/denilsonsa/978f1d842cf5430f57f6
-[github]: https://github.com/denilsonsa/udev-not-joystick
+[github]: https://github.com/denilsonsa/udev-joystick-blacklist
