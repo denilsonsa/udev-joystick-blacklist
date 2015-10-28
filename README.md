@@ -22,6 +22,8 @@ This is just a blacklist, which will always be incomplete (until the actual bug 
 
 Personally, I'd try the first version (that sets permissions to `0000`) first. If it does not work or if it gives trouble for some reason, I'd try the second version (that removes the device).
 
+The first version (that sets permissions to `0000`) seems to work fine across several distros, but some distros ([such as OSMC](https://github.com/denilsonsa/udev-joystick-blacklist/issues/5#issuecomment-151872841)) may have additional rules that end up setting the permssions back to another value. In such case, the second version (that removes the device) should work.
+
 In the end, it's up to you, and it's about what works best for you and your system.
 
 ## How it works
@@ -50,9 +52,16 @@ It is not possible to rename a device, so `NAME="not-a-joystick%n"` will not wor
 ### Learning more about udev rules
 
 * Documentation: <http://www.freedesktop.org/software/systemd/man/udev.html> (and also the manpages installed on your system).
-* Monitoring and debugging kernel and udev events: `udevadm monitor -p`
 * Debugging udev rules: <http://www.jpichon.net/blog/2011/12/debugging-udev-rules/>.
 * Nice (but outdated) udev tutorial: <http://www.reactivated.net/writing_udev_rules.html>.
+
+## Troubleshooting
+
+Look at the generated `/dev` files: `ls -l /dev/input/`
+
+Unplug and plug your USB device while monitoring for kernel and udev events: `udevadm monitor -p`
+
+Look for other udev rules that may interact with the same device: `grep -i '\bjs\b\|joystick' /lib/udev/rules.d/* /etc/udev/rules.d/*`
 
 ## Testing joystick detection
 
