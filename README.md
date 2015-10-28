@@ -42,7 +42,7 @@ The following actions are taken on each matching rule:
 
 * Clears `ID_INPUT_JOYSTICK` property, which prevents [some `/lib/udev/rules.d/*` rules from running](https://github.com/denilsonsa/udev-joystick-blacklist/issues/5#issuecomment-151832071).
 * Depending on which version you installed:
-    * Removes read and write permissions by setting `MODE="0000"`. This effectively prevents the device from being used.
+    * [Removes read and write permissions by setting `MODE="0000"`](https://en.wikipedia.org/wiki/File_system_permissions#Numeric_notation). This effectively prevents the device from being used.
     * Removes the device file from `/dev/input/`. This also prevents the device from being found or from being listed.
 
 It is not possible to rename a device, so `NAME="not-a-joystick%n"` will not work.
