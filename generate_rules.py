@@ -33,6 +33,8 @@ DEVICES = [
     ('045e', '0768'),
 
     # Microsoft® 2.4GHz Transceiver v9.0
+    # Microsoft® Nano Transceiver v2.1
+    # Microsoft Sculpt Ergonomic Keyboard (5KV-00001)
     ('045e', '07a5'),
 
     # Microsoft® Nano Transceiver v1.0
@@ -41,9 +43,6 @@ DEVICES = [
 
     # Microsoft® Nano Transceiver v2.0
     ('045e', '0800'),
-
-    # Microsoft® Nano Transceiver v2.1
-    ('045e', '07a5'),
 
     # WACOM CTE-640-U V4.0-3
     # Wacom Co., Ltd Graphire 4 6x8
