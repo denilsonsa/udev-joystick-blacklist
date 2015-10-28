@@ -8,12 +8,23 @@ This is just a blacklist, which will always be incomplete (until the actual bug 
 
 ## How to install
 
+### Version that changes permissions to 0000
+
     sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules \
       https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks.rules
 
 Single-line version:
 
     sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks.rules
+
+### Version that removes the device
+
+    sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks-rm.rules \
+      https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks-rm.rules
+
+Single-line version:
+
+    sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks-rm.rules https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks-rm.rules
 
 ## How it works
 
@@ -31,8 +42,10 @@ A rule will match if:
 
 The following actions are taken on each matching rule:
 
-* Removing read and write permissions by setting `MODE="0000"`. This effectively prevents the device from being used.
-* Clearing `ID_INPUT_JOYSTICK` property, which prevents some `/lib/udev/rules.d/*` rules from running.
+* Clears `ID_INPUT_JOYSTICK` property, which prevents [some `/lib/udev/rules.d/*` rules from running](https://github.com/denilsonsa/udev-joystick-blacklist/issues/5#issuecomment-151832071).
+* Depending on which version you installed:
+    * Removes read and write permissions by setting `MODE="0000"`. This effectively prevents the device from being used.
+    * Removes the device file from `/dev/input/`. This also prevents the device from being found or from being listed.
 
 It is not possible to rename a device, so `NAME="not-a-joystick%n"` will not work.
 
