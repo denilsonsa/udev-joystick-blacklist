@@ -13,18 +13,16 @@ This is just a blacklist, which will always be incomplete (until the actual bug 
     sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules \
       https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks.rules
 
-Single-line version:
-
-    sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks.rules https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks.rules
-
 ### Version that removes the device
 
     sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks-rm.rules \
       https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks-rm.rules
 
-Single-line version:
+### Which version should I use?
 
-    sudo curl -o /etc/udev/rules.d/51-these-are-not-joysticks-rm.rules https://raw.githubusercontent.com/denilsonsa/udev-joystick-blacklist/master/51-these-are-not-joysticks-rm.rules
+Personally, I'd try the first version (that sets permissions to `0000`) first. If it does not work or if it gives trouble for some reason, I'd try the second version (that removes the device).
+
+In the end, it's up to you, and it's about what works best for you and your system.
 
 ## How it works
 
