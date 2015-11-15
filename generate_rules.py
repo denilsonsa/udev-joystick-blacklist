@@ -54,6 +54,9 @@ DEVICES = [
     # A4 Tech Co., G7 750 mouse
     ('09da', '054f'),
 
+    # A4 Tech Co., Ltd Bloody TL80 Terminator Laser Gaming Mouse
+    ('09da', '31b5'),
+
     # A4 Tech Co., Ltd Bloody RT7 Terminator Wireless
     ('09da', '3997'),
 
