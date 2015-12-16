@@ -66,6 +66,9 @@ DEVICES = [
     # A4 Tech Co., Ltd Bloody V5
     ('09da', '7b22'),
 
+    # A4 Tech Co., Ltd Bloody R3 mouse
+    ('09da', '7f2d'),
+
     # A4 Tech Co., Ltd X-718BK Oscar Optical Gaming Mouse
     ('09da', '8090'),
 
