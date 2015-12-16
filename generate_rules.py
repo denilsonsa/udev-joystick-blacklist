@@ -63,6 +63,9 @@ DEVICES = [
     # Modecom MC-5006 Keyboard
     ('09da', '51f4'),
 
+    # A4 Tech Co., Ltd Terminator TL9 Laser Gaming Mouse
+    ('09da', '5589'),
+
     # A4 Tech Co., Ltd Bloody V5
     ('09da', '7b22'),
 
