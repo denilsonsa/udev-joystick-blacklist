@@ -26,6 +26,9 @@ DEVICES = [
     # Microsoft Wireless Desktop 3000
     ('045e', '0745'),
 
+    # Microsoft® SideWinder(TM) 2.4GHz Transceiver
+    ('045e', '0748'),
+
     # Microsoft Corp. Wired Keyboard 600
     ('045e', '0750'),
 

@@ -13,6 +13,8 @@ SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0730", ENV{ID_IN
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0730", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0745", ENV{ID_INPUT_JOYSTICK}=="?*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0745", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0748", ENV{ID_INPUT_JOYSTICK}=="?*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0748", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0750", ENV{ID_INPUT_JOYSTICK}=="?*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0750", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0768", ENV{ID_INPUT_JOYSTICK}=="?*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
