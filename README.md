@@ -75,6 +75,9 @@ These tools list and interact with all available/detected joysticks:
     * <https://bitbucket.org/denilsonsa/pygame-joystick-test/>
     * <https://bitbucket.org/denilsonsa/pygame-joystick-test/src/default/pygame-joystick-test.py>
     * Uses Python 2.x and [Pygame](http://www.pygame.org/), which uses [SDL](https://www.libsdl.org/).
+* **sdl-jstest --list** and **sdl2-jstest --list**
+    * <https://github.com/Grumbel/sdl-jstest>
+    * Uses [SDL](https://www.libsdl.org/) and prints the detected joysticks to stdout.
 * **wine control.exe joy.cpl**
     * <https://www.winehq.org/>
     * The [Wine control panel](http://wiki.winehq.org/control) includes a *Game Controllers* configuration.
