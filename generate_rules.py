@@ -95,6 +95,9 @@ def main():
         # This file is auto-generated. For more information:
         # https://github.com/denilsonsa/udev-joystick-blacklist
 
+        # NVIDIA Shield Controller, see: https://github.com/denilsonsa/udev-joystick-blacklist/issues/9
+        SUBSYSTEM=="input", ATTRS{idVendor}=="0955", ATTRS{idProduct}=="7210", MODE="0666", ENV{ID_INPUT_JOYSTICK}="1", ENV{ID_INPUT_MOUSE}=""
+
         ''')
 
     filename = '51-these-are-not-joysticks.rules'

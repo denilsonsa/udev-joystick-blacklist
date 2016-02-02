@@ -3,6 +3,9 @@
 # This file is auto-generated. For more information:
 # https://github.com/denilsonsa/udev-joystick-blacklist
 
+# NVIDIA Shield Controller, see: https://github.com/denilsonsa/udev-joystick-blacklist/issues/9
+SUBSYSTEM=="input", ATTRS{idVendor}=="0955", ATTRS{idProduct}=="7210", MODE="0666", ENV{ID_INPUT_JOYSTICK}="1", ENV{ID_INPUT_MOUSE}=""
+
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="009d", ENV{ID_INPUT_JOYSTICK}=="?*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="009d", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="00b0", ENV{ID_INPUT_JOYSTICK}=="?*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
