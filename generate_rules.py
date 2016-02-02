@@ -90,26 +90,23 @@ DEVICES = [
 
 
 def main():
-    with open('51-these-are-not-joysticks.rules', 'w') as f:
-        f.write(textwrap.dedent('''\
-            # /etc/udev/rules.d/51-these-are-not-joysticks.rules
-            #
-            # This file is auto-generated. For more information:
-            # https://github.com/denilsonsa/udev-joystick-blacklist
+    common_header = textwrap.dedent('''\
+        #
+        # This file is auto-generated. For more information:
+        # https://github.com/denilsonsa/udev-joystick-blacklist
 
-            '''))
+        ''')
+
+    filename = '51-these-are-not-joysticks.rules'
+    with open(filename, 'w') as f:
+        f.write('# /etc/udev/rules.d/' + filename + '\n' + common_header)
         for vendor, product in DEVICES:
             f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
             f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
 
-    with open('51-these-are-not-joysticks-rm.rules', 'w') as f:
-        f.write(textwrap.dedent('''\
-            # /etc/udev/rules.d/51-these-are-not-joysticks-rm.rules
-            #
-            # This file is auto-generated. For more information:
-            # https://github.com/denilsonsa/udev-joystick-blacklist
-
-            '''))
+    filename = '51-these-are-not-joysticks-rm.rules'
+    with open(filename, 'w') as f:
+        f.write('# /etc/udev/rules.d/' + filename + '\n' + common_header)
         for vendor, product in DEVICES:
             f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", RUN+="/bin/rm %%E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
             f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", RUN+="/bin/rm %%E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
