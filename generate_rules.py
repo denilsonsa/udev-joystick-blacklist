@@ -34,6 +34,9 @@ DEVICES = [
 
     # Microsoft Corp. Sidewinder X4 keyboard
     ('045e', '0768'),
+    
+    # Microsoft Corp. Arc Touch Mouse Transceiver
+    ('045e', '0773'),
 
     # Microsoft® 2.4GHz Transceiver v9.0
     # Microsoft® Nano Transceiver v2.1
