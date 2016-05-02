@@ -87,6 +87,9 @@ DEVICES = [
     # A4 Tech Co., Sharkoon Fireglider Optical
     ('09da', '9066'),
 
+    # A4 Tech Co., Ltd Bloody V2
+    ('09da', 'f613'),
+
     # Cooler Master Storm Mizar Mouse
     ('2516', '001f'),
 ]
