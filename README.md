@@ -108,6 +108,14 @@ There are reports of this issue on different distros and projects.
 * <https://bugs.winehq.org/show_bug.cgi?id=35954>
 * <https://github.com/ValveSoftware/steam-for-linux/issues/3943>
 
+The udev rules in this repository have been aded to:
+
+* Debian and Ubuntu
+    * [Debian bug #714399](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=714399)
+    * `joystick` package, starting on version 1.4.9-1
+
+But remember that the version distributed elsewhere might be different than the version on this repository.
+
 ## Known devices
 
 For the complete list, look at [`generate_rules.py`](generate_rules.py) script.
