@@ -66,6 +66,9 @@ DEVICES = [
     # A4 Tech Co., Ltd Bloody RT7 Terminator Wireless
     ('09da', '3997'),
 
+    # A4 Tech Co., Ltd Bloody V8 mouse
+    ('09da', '3f8b'),
+
     # Modecom MC-5006 Keyboard
     ('09da', '51f4'),
 
