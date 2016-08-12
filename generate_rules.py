@@ -81,11 +81,14 @@ DEVICES = [
     # A4 Tech Co., Ltd X-718BK Oscar Optical Gaming Mouse
     ('09da', '8090'),
 
-    # A4 Tech Co., Ltd XL-750BK Laser Mouse
-    ('09da', '9090'),
-
     # A4 Tech Co., Sharkoon Fireglider Optical
     ('09da', '9066'),
+
+    # A4 Tech Co., Ltd XL-730K / XL-750BK / XL-755BK Laser Mouse
+    ('09da', '9090'),
+
+    # A4 Tech Co., Ltd X7 G800V keyboard
+    ('09da', '90c0'),
 
     # Cooler Master Storm Mizar Mouse
     ('2516', '001f'),
