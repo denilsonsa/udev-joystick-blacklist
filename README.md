@@ -78,12 +78,19 @@ These tools list and interact with all available/detected joysticks:
 * **sdl-jstest --list** and **sdl2-jstest --list**
     * <https://github.com/Grumbel/sdl-jstest>
     * Uses [SDL](https://www.libsdl.org/) and prints the detected joysticks to stdout.
+    * SDL1 looks at [the first 32 devices](https://hg.libsdl.org/SDL/file/e49caa693be5/src/joystick/linux/SDL_sysjoystick.c#l258) named [`/dev/input/js*` or `/dev/js*`](https://hg.libsdl.org/SDL/file/e49caa693be5/src/joystick/linux/SDL_sysjoystick.c#l399).
+        * [As a special case, it can also look at `/dev/input/event*`](https://hg.libsdl.org/SDL/file/e49caa693be5/src/joystick/linux/SDL_sysjoystick.c#l493).
+    * SDL2 uses  `/dev/input/event*` devices that are marked with `ID_INPUT_JOYSTICK`.
+        * Either by [using libudev](https://hg.libsdl.org/SDL/file/42768c568a50/src/joystick/linux/SDL_sysjoystick.c#l336), or by [testing the first 32 devices](https://hg.libsdl.org/SDL/file/42768c568a50/src/joystick/linux/SDL_sysjoystick.c#l318).
 * **wine control.exe joy.cpl**
     * <https://www.winehq.org/>
     * The [Wine control panel](http://wiki.winehq.org/control) includes a *Game Controllers* configuration.
+    * It can look at [the first 64 devices](https://source.winehq.org/git/wine.git/blob/dca0e38d82c737cd8aeab63e08cf1990d05d9671:/dlls/dinput/joystick_linux.c#l139) named [`/dev/input/js*` or `/dev/js*`](https://source.winehq.org/git/wine.git/blob/dca0e38d82c737cd8aeab63e08cf1990d05d9671:/dlls/dinput/joystick_linux.c#l72).
+    * It can look at [the first 64 devices](https://source.winehq.org/git/wine.git/blob/dca0e38d82c737cd8aeab63e08cf1990d05d9671:/dlls/dinput/joystick_linuxinput.c#l180) named [`/dev/input/event*`](https://source.winehq.org/git/wine.git/blob/dca0e38d82c737cd8aeab63e08cf1990d05d9671:/dlls/dinput/joystick_linuxinput.c#l70).
 * **steam -bigpicture**
     * <http://store.steampowered.com/bigpicture>
     * Valve's Steam → Big Picture mode → ⚙ Settings → Controller.
+    * Uses SDL2 to detect joysticks.
 
 ## Bug reports and mentions
 
@@ -105,10 +112,10 @@ There are reports of this issue on different distros and projects.
 
 For the complete list, look at [`generate_rules.py`](generate_rules.py) script.
 
-* A4 Tech mouse and/or keyboard.
-* Microsoft mouse and/or keyboard.
+* A4 Tech mice and/or keyboards.
+* Cooler Master mice.
+* Microsoft mice and/or keyboards.
 * Wacom tablets.
-* Cooler Master mouse.
 
 ## Contributing
 
