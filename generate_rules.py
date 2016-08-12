@@ -93,6 +93,9 @@ DEVICES = [
     # A4 Tech Co., Ltd X7 G800V keyboard
     ('09da', '90c0'),
 
+    # A4 Tech Co., Ltd Bloody V2 mouse
+    ('09da', 'f613'),
+
     # Cooler Master Storm Mizar Mouse
     ('2516', '001f'),
 ]
