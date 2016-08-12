@@ -34,7 +34,7 @@ DEVICES = [
 
     # Microsoft Corp. Sidewinder X4 keyboard
     ('045e', '0768'),
-    
+
     # Microsoft Corp. Arc Touch Mouse Transceiver
     ('045e', '0773'),
 
@@ -50,9 +50,17 @@ DEVICES = [
     # Microsoft® Nano Transceiver v2.0
     ('045e', '0800'),
 
+    # List of Wacom devices at: http://linuxwacom.sourceforge.net/wiki/index.php/Device_IDs
+
     # WACOM CTE-640-U V4.0-3
     # Wacom Co., Ltd Graphire 4 6x8
     ('056a', '0016'),
+
+    # Wacom CTE-450 Bamboo Fun 4x5
+    ('056a', '0017'),
+
+    # Wacom CTE-650 Bamboo Fun 6x8
+    ('056a', '0018'),
 
     # Wacom Bamboo Pen and Touch CTH-460
     ('056a', '00d1'),
