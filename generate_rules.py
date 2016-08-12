@@ -51,64 +51,36 @@ DEVICES = [
     ('045e', '0800'),
 
     # List of Wacom devices at: http://linuxwacom.sourceforge.net/wiki/index.php/Device_IDs
+    ('056a', '0010'),  # Wacom ET-0405 Graphire
+    ('056a', '0011'),  # Wacom ET-0405A Graphire2 (4x5)
+    ('056a', '0012'),  # Wacom ET-0507A Graphire2 (5x7)
+    ('056a', '0013'),  # Wacom CTE-430 Graphire3 (4x5)
+    ('056a', '0014'),  # Wacom CTE-630 Graphire3 (6x8)
+    ('056a', '0015'),  # Wacom CTE-440 Graphire4 (4x5)
+    ('056a', '0016'),  # Wacom CTE-640 Graphire4 (6x8)
+    ('056a', '0017'),  # Wacom CTE-450 Bamboo Fun (4x5)
+    ('056a', '0016'),  # Wacom CTE-640 Graphire 4 6x8
+    ('056a', '0017'),  # Wacom CTE-450 Bamboo Fun 4x5
+    ('056a', '0018'),  # Wacom CTE-650 Bamboo Fun 6x8
+    ('056a', '0019'),  # Wacom CTE-631 Bamboo One
+    ('056a', '00d1'),  # Wacom Bamboo Pen and Touch CTH-460
 
-    # WACOM CTE-640-U V4.0-3
-    # Wacom Co., Ltd Graphire 4 6x8
-    ('056a', '0016'),
+    ('09da', '054f'),  # A4 Tech Co., G7 750 mouse
+    ('09da', '31b5'),  # A4 Tech Co., Ltd Bloody TL80 Terminator Laser Gaming Mouse
+    ('09da', '3997'),  # A4 Tech Co., Ltd Bloody RT7 Terminator Wireless
+    ('09da', '3f8b'),  # A4 Tech Co., Ltd Bloody V8 mouse
+    ('09da', '51f4'),  # Modecom MC-5006 Keyboard
+    ('09da', '5589'),  # A4 Tech Co., Ltd Terminator TL9 Laser Gaming Mouse
+    ('09da', '7b22'),  # A4 Tech Co., Ltd Bloody V5
+    ('09da', '7f2d'),  # A4 Tech Co., Ltd Bloody R3 mouse
+    ('09da', '8090'),  # A4 Tech Co., Ltd X-718BK Oscar Optical Gaming Mouse
+    ('09da', '9066'),  # A4 Tech Co., Sharkoon Fireglider Optical
+    ('09da', '9090'),  # A4 Tech Co., Ltd XL-730K / XL-750BK / XL-755BK Laser Mouse
+    ('09da', '90c0'),  # A4 Tech Co., Ltd X7 G800V keyboard
+    ('09da', 'f32a'),  # A4 Tech Co., Ltd Bloody B540 keyboard
+    ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
 
-    # Wacom CTE-450 Bamboo Fun 4x5
-    ('056a', '0017'),
-
-    # Wacom CTE-650 Bamboo Fun 6x8
-    ('056a', '0018'),
-
-    # Wacom Bamboo Pen and Touch CTH-460
-    ('056a', '00d1'),
-
-    # A4 Tech Co., G7 750 mouse
-    ('09da', '054f'),
-
-    # A4 Tech Co., Ltd Bloody TL80 Terminator Laser Gaming Mouse
-    ('09da', '31b5'),
-
-    # A4 Tech Co., Ltd Bloody RT7 Terminator Wireless
-    ('09da', '3997'),
-
-    # A4 Tech Co., Ltd Bloody V8 mouse
-    ('09da', '3f8b'),
-
-    # Modecom MC-5006 Keyboard
-    ('09da', '51f4'),
-
-    # A4 Tech Co., Ltd Terminator TL9 Laser Gaming Mouse
-    ('09da', '5589'),
-
-    # A4 Tech Co., Ltd Bloody V5
-    ('09da', '7b22'),
-
-    # A4 Tech Co., Ltd Bloody R3 mouse
-    ('09da', '7f2d'),
-
-    # A4 Tech Co., Ltd X-718BK Oscar Optical Gaming Mouse
-    ('09da', '8090'),
-
-    # A4 Tech Co., Sharkoon Fireglider Optical
-    ('09da', '9066'),
-
-    # A4 Tech Co., Ltd XL-730K / XL-750BK / XL-755BK Laser Mouse
-    ('09da', '9090'),
-
-    # A4 Tech Co., Ltd X7 G800V keyboard
-    ('09da', '90c0'),
-
-    # A4 Tech Co., Ltd Bloody B540 keyboard
-    ('09da', 'f32a'),
-
-    # A4 Tech Co., Ltd Bloody V2 mouse
-    ('09da', 'f613'),
-
-    # Cooler Master Storm Mizar Mouse
-    ('2516', '001f'),
+    ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
 ]
 
 
