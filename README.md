@@ -2,7 +2,7 @@
 
 Fix for keyboard/mouse/tablet being detected as joystick in Linux.
 
-There are several devices that, although recognized by kernel as joysticks, are not joysticks. This repository contains rules that will prevent the non-functional `/dev/input/js*` and `/dev/input/event*` devices from being used, by removing read/write permissions from them.
+There are several devices that, although recognized by kernel as joysticks, are not joysticks. This repository contains rules that will prevent the non-functional `/dev/input/js*` and `/dev/input/event*` devices from being recognized as joysticks.
 
 This is just a blacklist, which will always be incomplete (until the actual bug gets fixed). Feel free to add more devices to this list.
 
@@ -43,7 +43,7 @@ A rule will match if:
 The following actions are taken on each matching rule:
 
 * Clears `ID_INPUT_JOYSTICK` property, which prevents [some `/lib/udev/rules.d/*` rules from running](https://github.com/denilsonsa/udev-joystick-blacklist/issues/5#issuecomment-151832071).
-* Depending on which version you installed:
+* Depending on which version you installed, one of the following extra actions are applied only for `/dev/input/js*`:
     * [Removes read and write permissions by setting `MODE="0000"`](https://en.wikipedia.org/wiki/File_system_permissions#Numeric_notation). This effectively prevents the device from being used.
     * Removes the device file from `/dev/input/`. This also prevents the device from being found or from being listed.
 
