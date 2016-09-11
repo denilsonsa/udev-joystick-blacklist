@@ -81,6 +81,7 @@ DEVICES = [
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
 
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
+    ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
 ]
 
 
