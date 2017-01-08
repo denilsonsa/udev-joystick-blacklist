@@ -79,6 +79,7 @@ DEVICES = [
     ('09da', '90c0'),  # A4 Tech Co., Ltd X7 G800V keyboard
     ('09da', 'f32a'),  # A4 Tech Co., Ltd Bloody B540 keyboard
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
+    ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
 
     ('20a0', '422d'),  # Winkeyless.kr Keyboards
 
