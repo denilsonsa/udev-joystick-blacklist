@@ -80,10 +80,10 @@ DEVICES = [
     ('09da', 'f32a'),  # A4 Tech Co., Ltd Bloody B540 keyboard
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
 
+    ('20a0', '422d'),  # Winkeyless.kr Keyboards
+
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
-
-    ('20a0', '422d'),  # Winkeyless.kr Keyboards
 ]
 
 
