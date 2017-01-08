@@ -26,6 +26,10 @@ The first version (that sets permissions to `0000`) seems to work fine across se
 
 In the end, it's up to you, and it's about what works best for you and your system.
 
+### What's different in `after_kernel_4_9/`?
+
+A patch has been accepted into Linux kernel 4.9, so that Microsoft devices will not be detected as joysticks anymore. Thus, those devices are not included in `after_kernel_4_9/*`. Read [issue #20](https://github.com/denilsonsa/udev-joystick-blacklist/issues/20) for details.
+
 ## How it works
 
 ### Matching
@@ -122,7 +126,7 @@ For the complete list, look at [`generate_rules.py`](generate_rules.py) script.
 
 * A4 Tech mice and/or keyboards.
 * Cooler Master mice.
-* Microsoft mice and/or keyboards.
+* Microsoft mice and/or keyboards. ([Fixed in Linux kernel 4.9.](https://github.com/denilsonsa/udev-joystick-blacklist/issues/20))
 * Wacom tablets.
 
 ## Contributing

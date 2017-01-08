@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os.path
 import textwrap
 
 # List of tuples ('idVendor', 'idProduct'), as four hexadecimal digits.
@@ -90,27 +91,38 @@ DEVICES = [
 ]
 
 
+def write_mode_0000_udev_rule_file(path, devices, message):
+    filename = os.path.basename(path)
+    with open(path, 'w') as f:
+        f.write('# /etc/udev/rules.d/' + filename + '\n' + message + '\n')
+        for vendor, product in devices:
+            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+
+
+def write_rm_udev_rule_file(path, devices, message):
+    filename = os.path.basename(path)
+    with open(path, 'w') as f:
+        f.write('# /etc/udev/rules.d/' + filename + '\n' + message + '\n')
+        for vendor, product in devices:
+            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", RUN+="/bin/rm %%E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+
+
 def main():
     common_header = textwrap.dedent('''\
         #
         # This file is auto-generated. For more information:
         # https://github.com/denilsonsa/udev-joystick-blacklist
-
         ''')
 
-    filename = '51-these-are-not-joysticks.rules'
-    with open(filename, 'w') as f:
-        f.write('# /etc/udev/rules.d/' + filename + '\n' + common_header)
-        for vendor, product in DEVICES:
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+    write_mode_0000_udev_rule_file('51-these-are-not-joysticks.rules', DEVICES, common_header)
+    write_rm_udev_rule_file('51-these-are-not-joysticks-rm.rules', DEVICES, common_header)
 
-    filename = '51-these-are-not-joysticks-rm.rules'
-    with open(filename, 'w') as f:
-        f.write('# /etc/udev/rules.d/' + filename + '\n' + common_header)
-        for vendor, product in DEVICES:
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", RUN+="/bin/rm %%E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+    # See: https://github.com/denilsonsa/udev-joystick-blacklist/issues/20
+    devices_except_microsoft = [dev for dev in DEVICES if dev[0] != '045e']
+    write_mode_0000_udev_rule_file('after_kernel_4_9/51-these-are-not-joysticks.rules', devices_except_microsoft, common_header)
+    write_rm_udev_rule_file('after_kernel_4_9/51-these-are-not-joysticks-rm.rules', devices_except_microsoft, common_header)
 
 
 if __name__ == '__main__':
