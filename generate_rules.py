@@ -81,6 +81,8 @@ DEVICES = [
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
     ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
 
+    ('1e7d', '2e4a'),  # Roccat Tyon Mouse
+
     ('20a0', '422d'),  # Winkeyless.kr Keyboards
 
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
