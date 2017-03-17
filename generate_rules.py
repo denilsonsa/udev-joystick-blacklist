@@ -84,6 +84,8 @@ DEVICES = [
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
     ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
 
+    ('1d57', 'ad03'),  # [T3] 2.4GHz and IR Air Mouse Remote Control
+
     ('1e7d', '2e4a'),  # Roccat Tyon Mouse
 
     ('20a0', '422d'),  # Winkeyless.kr Keyboards
