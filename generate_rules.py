@@ -99,19 +99,25 @@ def write_mode_0000_udev_rule_file(path, devices, message):
     filename = os.path.basename(path)
     with open(path, 'w') as f:
         f.write('# /etc/udev/rules.d/' + filename + '\n' + message + '\n')
+        f.write('ACTION!="add|change", GOTO="joystick_blacklist_end"\n')
+        f.write('SUBSYSTEM!="input", GOTO="joystick_blacklist_end"\n')
+        f.write('ENV{ID_INPUT_JOYSTICK}=="", GOTO="joystick_blacklist_end"\n\n')
         for vendor, product in devices:
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
-
+            f.write('ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+            f.write('ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", MODE="0000"\n' % (vendor, product))
+        f.write('\nLABEL="joystick_blacklist_end"\n')
 
 def write_rm_udev_rule_file(path, devices, message):
     filename = os.path.basename(path)
     with open(path, 'w') as f:
         f.write('# /etc/udev/rules.d/' + filename + '\n' + message + '\n')
+        f.write('ACTION!="add|change", GOTO="joystick_blacklist_end"\n')
+        f.write('SUBSYSTEM!="input", GOTO="joystick_blacklist_end"\n')
+        f.write('ENV{ID_INPUT_JOYSTICK}=="", GOTO="joystick_blacklist_end"\n\n')
         for vendor, product in devices:
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
-            f.write('SUBSYSTEM=="input", ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", RUN+="/bin/rm %%E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
-
+            f.write('ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", ENV{ID_INPUT_JOYSTICK}=""\n' % (vendor, product))
+            f.write('ATTRS{idVendor}=="%s", ATTRS{idProduct}=="%s", KERNEL=="js[0-9]*", RUN+="/bin/rm %%E{DEVNAME}"\n' % (vendor, product))
+        f.write('\nLABEL="joystick_blacklist_end"\n')
 
 def main():
     common_header = textwrap.dedent('''\
