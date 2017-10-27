@@ -81,6 +81,7 @@ DEVICES = [
     ('09da', '9090'),  # A4 Tech Co., Ltd XL-730K / XL-750BK / XL-755BK Laser Mouse
     ('09da', '90c0'),  # A4 Tech Co., Ltd X7 G800V keyboard
     ('09da', 'f012'),  # A4 Tech Co., Ltd Bloody V7 mouse
+    ('09da', '1410'),  # A4 Tech Co., Ltd Bloody AL9 mouse
     ('09da', 'f32a'),  # A4 Tech Co., Ltd Bloody B540 keyboard
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
     ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
