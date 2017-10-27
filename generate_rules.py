@@ -76,6 +76,7 @@ DEVICES = [
     ('09da', '7b22'),  # A4 Tech Co., Ltd Bloody V5
     ('09da', '7f2d'),  # A4 Tech Co., Ltd Bloody R3 mouse
     ('09da', '8090'),  # A4 Tech Co., Ltd X-718BK Oscar Optical Gaming Mouse
+    ('09da', '9033'),  # A4 Tech Co., X7 X-705K
     ('09da', '9066'),  # A4 Tech Co., Sharkoon Fireglider Optical
     ('09da', '9090'),  # A4 Tech Co., Ltd XL-730K / XL-750BK / XL-755BK Laser Mouse
     ('09da', '90c0'),  # A4 Tech Co., Ltd X7 G800V keyboard
