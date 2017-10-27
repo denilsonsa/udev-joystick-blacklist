@@ -60,13 +60,12 @@ DEVICES = [
     ('056a', '0015'),  # Wacom CTE-440 Graphire4 (4x5)
     ('056a', '0016'),  # Wacom CTE-640 Graphire4 (6x8)
     ('056a', '0017'),  # Wacom CTE-450 Bamboo Fun (4x5)
-    ('056a', '0016'),  # Wacom CTE-640 Graphire 4 6x8
-    ('056a', '0017'),  # Wacom CTE-450 Bamboo Fun 4x5
     ('056a', '0018'),  # Wacom CTE-650 Bamboo Fun 6x8
     ('056a', '0019'),  # Wacom CTE-631 Bamboo One
     ('056a', '00d1'),  # Wacom Bamboo Pen and Touch CTH-460
 
     ('09da', '054f'),  # A4 Tech Co., G7 750 mouse
+    ('09da', '1410'),  # A4 Tech Co., Ltd Bloody AL9 mouse
     ('09da', '3043'),  # A4 Tech Co., Ltd Bloody R8A Gaming Mouse
     ('09da', '31b5'),  # A4 Tech Co., Ltd Bloody TL80 Terminator Laser Gaming Mouse
     ('09da', '3997'),  # A4 Tech Co., Ltd Bloody RT7 Terminator Wireless
@@ -81,7 +80,6 @@ DEVICES = [
     ('09da', '9090'),  # A4 Tech Co., Ltd XL-730K / XL-750BK / XL-755BK Laser Mouse
     ('09da', '90c0'),  # A4 Tech Co., Ltd X7 G800V keyboard
     ('09da', 'f012'),  # A4 Tech Co., Ltd Bloody V7 mouse
-    ('09da', '1410'),  # A4 Tech Co., Ltd Bloody AL9 mouse
     ('09da', 'f32a'),  # A4 Tech Co., Ltd Bloody B540 keyboard
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
     ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
