@@ -49,6 +49,8 @@ SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0019", ENV{ID_IN
 SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0019", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="00d1", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="030e", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="030e", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="054f", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="054f", KERNEL=="js[0-9]*", MODE="0000", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="1410", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""

@@ -63,6 +63,7 @@ DEVICES = [
     ('056a', '0018'),  # Wacom CTE-650 Bamboo Fun 6x8
     ('056a', '0019'),  # Wacom CTE-631 Bamboo One
     ('056a', '00d1'),  # Wacom Bamboo Pen and Touch CTH-460
+    ('056a', '030e'),  # Wacom Intuos Pen (S) CTL-480
 
     ('09da', '054f'),  # A4 Tech Co., G7 750 mouse
     ('09da', '1410'),  # A4 Tech Co., Ltd Bloody AL9 mouse
