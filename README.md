@@ -22,7 +22,7 @@ This is just a blacklist, which will always be incomplete (until the actual bug 
 
 Personally, I'd try the first version (that sets permissions to `0000`) first. If it does not work or if it gives trouble for some reason, I'd try the second version (that removes the device).
 
-The first version (that sets permissions to `0000`) seems to work fine across several distros, but some distros ([such as OSMC](https://github.com/denilsonsa/udev-joystick-blacklist/issues/5#issuecomment-151872841)) may have additional rules that end up setting the permssions back to another value. In such case, the second version (that removes the device) should work.
+The first version (that sets permissions to `0000`) seems to work fine across several distros, but some distros ([such as OSMC](https://github.com/denilsonsa/udev-joystick-blacklist/issues/5#issuecomment-151872841), [see also issue #26](https://github.com/denilsonsa/udev-joystick-blacklist/issues/26)) may have additional rules that end up setting the permssions back to another value. In such case, the second version (that removes the device) should work.
 
 In the end, it's up to you, and it's about what works best for you and your system.
 
