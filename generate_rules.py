@@ -93,6 +93,8 @@ DEVICES = [
 
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
+
+    ('04d9', 'a0df'),  # Tek Syndicate Mouse (E-Signal USB Gaming Mouse)
 ]
 
 
