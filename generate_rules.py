@@ -51,6 +51,8 @@ DEVICES = [
     # Microsoft® Nano Transceiver v2.0
     ('045e', '0800'),
 
+    ('04d9', 'a0df'),  # Tek Syndicate Mouse (E-Signal USB Gaming Mouse)
+
     # List of Wacom devices at: http://linuxwacom.sourceforge.net/wiki/index.php/Device_IDs
     ('056a', '0010'),  # Wacom ET-0405 Graphire
     ('056a', '0011'),  # Wacom ET-0405A Graphire2 (4x5)
@@ -95,8 +97,6 @@ DEVICES = [
 
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
-
-    ('04d9', 'a0df'),  # Tek Syndicate Mouse (E-Signal USB Gaming Mouse)
 ]
 
 
