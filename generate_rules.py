@@ -51,6 +51,8 @@ DEVICES = [
     # Microsoft® Nano Transceiver v2.0
     ('045e', '0800'),
 
+    ('046d', 'c30a'),  # Logitech, Inc. iTouch Composite keboard
+
     ('04d9', 'a0df'),  # Tek Syndicate Mouse (E-Signal USB Gaming Mouse)
 
     # List of Wacom devices at: http://linuxwacom.sourceforge.net/wiki/index.php/Device_IDs
