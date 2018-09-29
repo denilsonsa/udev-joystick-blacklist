@@ -99,6 +99,8 @@ DEVICES = [
 
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
+
+    ('1d57', 'ad03'),  # August PCR500 Air Mouse and Keyboard (Xenta, Freeway Technology)
 ]
 
 
