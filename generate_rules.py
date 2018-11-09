@@ -99,6 +99,8 @@ DEVICES = [
 
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
+
+    ('0c45', '800a'),  # Ilebygo Mini Wireless Keyboard Mouse Touchpad Combo
 ]
 
 
