@@ -103,6 +103,8 @@ DEVICES = [
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
 
+    ('1d57', 'ad03'),  # August PCR500 Air Mouse and Keyboard (Xenta, Freeway Technology)
+
     ('0c45', '800a'),  # Ilebygo Mini Wireless Keyboard Mouse Touchpad Combo
     
     ('28de', '1142'), # Steam Controller
