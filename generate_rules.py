@@ -90,6 +90,8 @@ DEVICES = [
     ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
 
     ('1b1c', '1b3c'),  # Corsair Harpoon RGB gaming mouse
+    ('1b1c', '1b2e'),  # Corsair Gaming M65 Pro RGB Mouse
+    ('1b1c', '1b2d'),  # Corsair Gaming K95 RGB PLATINUM Keyboard
     ('1b1c', '1b09'),  # Corsair Vengeance K70R keyboard
 
     ('1d57', 'ad03'),  # [T3] 2.4GHz and IR Air Mouse Remote Control
@@ -100,6 +102,8 @@ DEVICES = [
 
     ('2516', '001f'),  # Cooler Master Storm Mizar Mouse
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
+    
+    ('28de', '1142'), # Steam Controller
 ]
 
 
