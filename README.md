@@ -77,7 +77,7 @@ These tools list and interact with all available/detected joysticks:
     * [Detects up to 32 devices with `/dev/input/js*` path.](https://github.com/Grumbel/jstest-gtk/blob/2355f44f571a6d5f4ff4dfaf3a27ee223fb91ed7/src/joystick.cpp#L132)
 * **pygame-joystick-test.py**
     * <https://github.com/denilsonsa/pygame-joystick-test/>
-    * Uses Python 2.x and [Pygame](http://www.pygame.org/), which uses [SDL](https://www.libsdl.org/).
+    * Uses Python (2.x or 3.x) and [Pygame](http://www.pygame.org/), which uses [SDL](https://www.libsdl.org/).
 * **sdl-jstest --list** and **sdl2-jstest --list**
     * <https://github.com/Grumbel/sdl-jstest>
     * Uses [SDL](https://www.libsdl.org/) and prints the detected joysticks to stdout.
