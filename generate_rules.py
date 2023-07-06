@@ -89,6 +89,8 @@ DEVICES = [
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
     ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
 
+    ('0c45', '800a'),  # Ilebygo Mini Wireless Keyboard Mouse Touchpad Combo
+
     # "Speedy Industrial Supplies" mouse incorrectly named "OSA Express Network card"
     # Potentially also called "Hiraliy" or "Hiraly".
     ('1017', '2003'),
