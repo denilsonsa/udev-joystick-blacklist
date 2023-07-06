@@ -91,7 +91,10 @@ DEVICES = [
 
     ('1b1c', '1b3c'),  # Corsair Harpoon RGB gaming mouse
 
-    ('1d57', 'ad03'),  # [T3] 2.4GHz and IR Air Mouse Remote Control
+    # August PCR450 Air Mouse/Remote
+    # August PCR500 Air Mouse and Keyboard (Xenta, Freeway Technology)
+    # Xenta [T3] 2.4GHz and IR Air Mouse Remote Control
+    ('1d57', 'ad03'),
 
     ('1e7d', '2e4a'),  # Roccat Tyon Mouse
 
