@@ -65,7 +65,7 @@ Look at the generated `/dev` files: `ls -l /dev/input/`
 
 Unplug and plug your USB device while monitoring for kernel and udev events: `udevadm monitor -p`
 
-Look for other udev rules that may interact with the same device: `grep -i '\bjs\b\|joystick' /lib/udev/rules.d/* /etc/udev/rules.d/*`
+Look for other udev rules that may interact with the same device: `grep -i '\bjs\b\|joystick' /lib/udev/rules.d/* /usr/lib/udev/rules.d/* /etc/udev/rules.d/*`
 
 ## Testing joystick detection
 
@@ -116,6 +116,12 @@ The udev rules in this repository have been added to:
 * Debian and Ubuntu
     * [Debian bug #714399](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=714399)
     * `joystick` package, starting on version 1.4.9-1
+* Arch Linux and derivatives (such as Manjaro)
+    * [AUR package udev-joystick-blacklist](https://aur.archlinux.org/packages/udev-joystick-blacklist)
+* SDL library
+    * [SDL_ShouldIgnoreJoystick() inside SDL_joystick.c](https://github.com/spurious/SDL-mirror/blob/master/src/joystick/SDL_joystick.c#L2188C10-L2317)
+    * [Originally added only for Linux on 2017-04-06](https://github.com/spurious/SDL-mirror/commit/3b03af8b7e2c7105ffce8843fe395e6f3b2e678b)
+    * [Later expanded to other systems (such as Windows) on 2018-12-05](https://github.com/spurious/SDL-mirror/commit/87928f6cbd875c771b9647ff471ec6a37bd52491)
 
 But remember that the version distributed elsewhere might be different than the version on this repository.
 
@@ -124,9 +130,13 @@ But remember that the version distributed elsewhere might be different than the 
 For the complete list, look at [`generate_rules.py`](generate_rules.py) script.
 
 * A4 Tech mice and/or keyboards.
+* ASRock LED controller.
 * Cooler Master mice.
+* Corsair mice and/or keyboards.
+* Lenovo keyboard.
 * Microsoft mice and/or keyboards. ([Fixed in Linux kernel 4.9.](https://github.com/denilsonsa/udev-joystick-blacklist/issues/20))
 * Wacom tablets.
+* …and many others!
 
 ## Contributing
 
@@ -140,7 +150,7 @@ After suffering with this issue for a long time, I decided to investigate possib
 
 In October 2015, I decided to move the file to [this GitHub repository][github]. That way, it will be easier to make changes, to fork, to receive notifications, and essentially to maintain it.
 
-Ideally, the bug in the Linux kernel should be fixed, so that this repository (which is essentially just a workaround) wouldn't be needed anymore.
+Ideally, the bug in the Linux kernel should be fixed, so that this repository (which is essentially just a workaround) wouldn't be needed anymore. However, it's also possible those devices are incorrectly reporting their own capabilities, and thus the operating system is just following the device descriptors. Given there is [a report of this issue on Windows](https://github.com/spurious/SDL-mirror/commit/87928f6cbd875c771b9647ff471ec6a37bd52491), that could be the case.
 
 ## License
 
