@@ -89,6 +89,8 @@ DEVICES = [
     ('09da', 'f613'),  # A4 Tech Co., Ltd Bloody V2 mouse
     ('09da', 'f624'),  # A4 Tech Co., Ltd Bloody B120 Keyboard
 
+    ('1017', '2003'),  # "Speedy Industrial Supplies" mouse incorrectly named "OSA Express Network card"
+
     ('1b1c', '1b3c'),  # Corsair Harpoon RGB gaming mouse
 
     # August PCR450 Air Mouse/Remote
