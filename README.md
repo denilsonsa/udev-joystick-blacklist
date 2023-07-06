@@ -6,6 +6,19 @@ There are several devices that, although recognized by kernel as joysticks, are 
 
 This is just a blacklist, which will always be incomplete (until the actual bug gets fixed). Feel free to add more devices to this list.
 
+## Known devices
+
+For the complete list, look at the [`generate_rules.py`](generate_rules.py) script.
+
+* A4 Tech mice and/or keyboards.
+* ASRock LED controller.
+* Cooler Master mice.
+* Corsair mice and/or keyboards.
+* Lenovo keyboard.
+* Microsoft mice and/or keyboards. ([Fixed in Linux kernel 4.9.](https://github.com/denilsonsa/udev-joystick-blacklist/issues/20))
+* Wacom tablets.
+* …and many others!
+
 ## How to install
 
 ### Version that changes permissions to 0000
@@ -73,18 +86,17 @@ These tools list and interact with all available/detected joysticks:
 
 * **jstest-gtk**
     * <https://github.com/Grumbel/jstest-gtk/>
-    * [Directly interacts with `/dev/input/js*` devices. No library is used.](https://github.com/Grumbel/jstest-gtk/blob/2355f44f571a6d5f4ff4dfaf3a27ee223fb91ed7/src/joystick.cpp#L43)
-    * [Detects up to 32 devices with `/dev/input/js*` path.](https://github.com/Grumbel/jstest-gtk/blob/2355f44f571a6d5f4ff4dfaf3a27ee223fb91ed7/src/joystick.cpp#L132)
+    * [Directly interacts with `/dev/input/js*` devices. No library is used.](https://github.com/Grumbel/jstest-gtk/blob/17956d285fedcf476ea753ff850fa7adf51ba07c/src/joystick.cppL42)
+    * [Detects up to 32 devices with `/dev/input/js*` path.](https://github.com/Grumbel/jstest-gtk/blob/17956d285fedcf476ea753ff850fa7adf51ba07c/src/joystick.cpp#L152-L161)
 * **pygame-joystick-test.py**
     * <https://github.com/denilsonsa/pygame-joystick-test/>
     * Uses Python (2.x or 3.x) and [Pygame](http://www.pygame.org/), which uses [SDL](https://www.libsdl.org/).
 * **sdl-jstest --list** and **sdl2-jstest --list**
-    * <https://github.com/Grumbel/sdl-jstest>
+    * <https://gitlab.com/sdl-jstest/sdl-jstest>
     * Uses [SDL](https://www.libsdl.org/) and prints the detected joysticks to stdout.
-    * SDL1 looks at [the first 32 devices](https://hg.libsdl.org/SDL/file/e49caa693be5/src/joystick/linux/SDL_sysjoystick.c#l258) named [`/dev/input/js*` or `/dev/js*`](https://hg.libsdl.org/SDL/file/e49caa693be5/src/joystick/linux/SDL_sysjoystick.c#l399).
-        * [As a special case, it can also look at `/dev/input/event*`](https://hg.libsdl.org/SDL/file/e49caa693be5/src/joystick/linux/SDL_sysjoystick.c#l493).
-    * SDL2 uses  `/dev/input/event*` devices that are marked with `ID_INPUT_JOYSTICK`.
-        * Either by [using libudev](https://hg.libsdl.org/SDL/file/42768c568a50/src/joystick/linux/SDL_sysjoystick.c#l336), or by [testing the first 32 devices](https://hg.libsdl.org/SDL/file/42768c568a50/src/joystick/linux/SDL_sysjoystick.c#l318).
+    * SDL1 looks at [the first 32 devices](https://github.com/libsdl-org/SDL-1.2/blob/52c714024e2d5a5383f64f9b119ea96cb46f9af2/src/joystick/linux/SDL_sysjoystick.c#L258-L259) named [`/dev/input/js*` or `/dev/js*`](https://github.com/libsdl-org/SDL-1.2/blob/52c714024e2d5a5383f64f9b119ea96cb46f9af2/src/joystick/linux/SDL_sysjoystick.c#L405-L411).
+        * [As a special case, it can also look at `/dev/input/event*`](https://github.com/libsdl-org/SDL-1.2/blob/52c714024e2d5a5383f64f9b119ea96cb46f9af2/src/joystick/linux/SDL_sysjoystick.c#L496-L506).
+    * SDL2 can either use [`libudev` or `inotify` or just plain polling](https://github.com/libsdl-org/SDL/blob/1bf7898ddf1e0d6a6dd391614fd86f3731349fe2/src/joystick/linux/SDL_sysjoystick.c#L878-L892) to read entries from `/dev/input/`.
 * **wine control.exe joy.cpl**
     * <https://www.winehq.org/>
     * The [Wine control panel](http://wiki.winehq.org/control) includes a *Game Controllers* configuration.
@@ -95,6 +107,12 @@ These tools list and interact with all available/detected joysticks:
     * Valve's Steam → Big Picture mode → ⚙ Settings → Controller.
     * Uses SDL2 to detect joysticks.
 
+## Contributing
+
+The best ways to contribute are by [creating a new issue][issues] or by [making a pull request][forking]. Make sure you mention the device name/description and the vendor/product IDs. The relevant line from `lsusb` output is usually enough.
+
+This repository contains a list of devices compiled from contributions of several people. I cannot test every single device. If something does not work for you even after you have added the correct rules, please try debugging it on your own system. The output of `udevadm monitor -p` may prove very helpful. Also look at the output of `ls -l /dev/input/`.
+
 ## Bug reports and mentions
 
 There are reports of this issue on different distros and projects.
@@ -104,7 +122,6 @@ There are reports of this issue on different distros and projects.
 * <https://bugs.launchpad.net/ubuntu/+source/linux/+bug/390959>
 * <https://askubuntu.com/questions/173376/how-do-i-disable-joystick-input>
 * <https://ryort.wordpress.com/2011/12/04/udev-and-the-microsoft-digital-media-keyboard-3000-wha/>
-* <https://forum.manjaro.org/index.php?topic=15275.msg144519#msg144519>
 * <https://bbs.archlinux.org/viewtopic.php?id=190485>
 * <https://bbs.archlinux.org/viewtopic.php?id=142469>
 * <https://forums.gentoo.org/viewtopic-t-362032.html>
@@ -125,24 +142,9 @@ The udev rules in this repository have been added to:
 
 But remember that the version distributed elsewhere might be different than the version on this repository.
 
-## Known devices
+## Semi-related projects
 
-For the complete list, look at [`generate_rules.py`](generate_rules.py) script.
-
-* A4 Tech mice and/or keyboards.
-* ASRock LED controller.
-* Cooler Master mice.
-* Corsair mice and/or keyboards.
-* Lenovo keyboard.
-* Microsoft mice and/or keyboards. ([Fixed in Linux kernel 4.9.](https://github.com/denilsonsa/udev-joystick-blacklist/issues/20))
-* Wacom tablets.
-* …and many others!
-
-## Contributing
-
-The best ways to contribute are by [creating a new issue][issues] or by [making a pull request][forking]. Make sure you mention the device name/description and the vendor/product IDs. The relevant line from `lsusb` output is usually enough.
-
-This repository contains a list of devices compiled from contributions of several people. I cannot test every single device. If something does not work for you even after you have added the correct rules, please try debugging it on your own system. The output of `udevadm monitor -p` may prove very helpful. Also look at the output of `ls -l /dev/input/`.
+* [game-devices-udev](https://codeberg.org/fabiscafe/game-devices-udev) - Collection of udev rules for game controllers, usually giving permission for the user to access those devices.
 
 ## History of this repository
 
