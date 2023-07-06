@@ -97,7 +97,9 @@ DEVICES = [
     # Potentially also called "Hiraliy" or "Hiraly".
     ('1017', '2003'),
 
-    ('17ef', '608c'), # LiteOn Lenovo Calliope USB Keyboard
+    ('16c0', '04d0'),  # Corsair STRAFE RGB Gaming Keyboard
+
+    ('17ef', '608c'),  # LiteOn Lenovo Calliope USB Keyboard
 
     ('1b1c', '1b3c'),  # Corsair Harpoon RGB gaming mouse
     ('1b1c', '1b2f'),  # Corsair Sabre RGB gaming mouse
