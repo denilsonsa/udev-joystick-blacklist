@@ -92,6 +92,7 @@ DEVICES = [
     ('1017', '2003'),  # "Speedy Industrial Supplies" mouse incorrectly named "OSA Express Network card"
 
     ('1b1c', '1b3c'),  # Corsair Harpoon RGB gaming mouse
+    ('1b1c', '1b2f'),  # Corsair Sabre RGB gaming mouse
 
     # August PCR450 Air Mouse/Remote
     # August PCR500 Air Mouse and Keyboard (Xenta, Freeway Technology)
