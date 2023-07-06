@@ -102,8 +102,10 @@ DEVICES = [
 
     ('17ef', '608c'),  # LiteOn Lenovo Calliope USB Keyboard
 
-    ('1b1c', '1b3c'),  # Corsair Harpoon RGB gaming mouse
+    ('1b1c', '1b2d'),  # Corsair Gaming K95 RGB PLATINUM Keyboard
+    ('1b1c', '1b2e'),  # Corsair Gaming M65 Pro RGB Mouse
     ('1b1c', '1b2f'),  # Corsair Sabre RGB gaming mouse
+    ('1b1c', '1b3c'),  # Corsair Harpoon RGB gaming mouse
 
     # August PCR450 Air Mouse/Remote
     # August PCR500 Air Mouse and Keyboard (Xenta, Freeway Technology)
