@@ -109,6 +109,7 @@ DEVICES = [
     # Xenta [T3] 2.4GHz and IR Air Mouse Remote Control
     ('1d57', 'ad03'),
 
+    ('1e7d', '2dcb'),  # Roccat Kone Pure SE(L) Mouse
     ('1e7d', '2e4a'),  # Roccat Tyon Mouse
 
     ('20a0', '422d'),  # Winkeyless.kr Keyboards
