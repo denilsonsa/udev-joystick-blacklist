@@ -57,6 +57,8 @@ DEVICES = [
 
     ('04d9', 'a0df'),  # Tek Syndicate Mouse (E-Signal USB Gaming Mouse)
 
+    ('04d9', '8009'),  # OBINS ANNE PRO 2 keyboard
+
     # List of Wacom devices at: http://linuxwacom.sourceforge.net/wiki/index.php/Device_IDs
     ('056a', '0010'),  # Wacom ET-0405 Graphire
     ('056a', '0011'),  # Wacom ET-0405A Graphire2 (4x5)
