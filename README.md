@@ -93,6 +93,7 @@ These tools list and interact with all available/detected joysticks:
     * Uses Python (2.x or 3.x) and [Pygame](http://www.pygame.org/), which uses [SDL](https://www.libsdl.org/).
 * **sdl-jstest --list** and **sdl2-jstest --list**
     * <https://gitlab.com/sdl-jstest/sdl-jstest>
+    * <https://github.com/Grumbel/sdl-jstest>
     * Uses [SDL](https://www.libsdl.org/) and prints the detected joysticks to stdout.
     * SDL1 looks at [the first 32 devices](https://github.com/libsdl-org/SDL-1.2/blob/52c714024e2d5a5383f64f9b119ea96cb46f9af2/src/joystick/linux/SDL_sysjoystick.c#L258-L259) named [`/dev/input/js*` or `/dev/js*`](https://github.com/libsdl-org/SDL-1.2/blob/52c714024e2d5a5383f64f9b119ea96cb46f9af2/src/joystick/linux/SDL_sysjoystick.c#L405-L411).
         * [As a special case, it can also look at `/dev/input/event*`](https://github.com/libsdl-org/SDL-1.2/blob/52c714024e2d5a5383f64f9b119ea96cb46f9af2/src/joystick/linux/SDL_sysjoystick.c#L496-L506).
