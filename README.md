@@ -137,7 +137,7 @@ The udev rules in this repository have been added to:
 * Arch Linux and derivatives (such as Manjaro)
     * [AUR package udev-joystick-blacklist](https://aur.archlinux.org/packages/udev-joystick-blacklist)
 * SDL library
-    * [SDL_ShouldIgnoreJoystick() inside SDL_joystick.c](https://github.com/spurious/SDL-mirror/blob/master/src/joystick/SDL_joystick.c#L2188C10-L2317)
+    * [SDL_ShouldIgnoreJoystick() inside SDL_joystick.c](https://github.com/spurious/SDL-mirror/blob/master/src/joystick/SDL_joystick.c#L2188-L2317)
     * [Originally added only for Linux on 2017-04-06](https://github.com/spurious/SDL-mirror/commit/3b03af8b7e2c7105ffce8843fe395e6f3b2e678b)
     * [Later expanded to other systems (such as Windows) on 2018-12-05](https://github.com/spurious/SDL-mirror/commit/87928f6cbd875c771b9647ff471ec6a37bd52491)
 
