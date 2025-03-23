@@ -127,15 +127,17 @@ There are reports of this issue on different distros and projects.
 * <https://bbs.archlinux.org/viewtopic.php?id=142469>
 * <https://forums.gentoo.org/viewtopic-t-362032.html>
 * <https://bugs.winehq.org/show_bug.cgi?id=35954>
+* <https://bugzilla.redhat.com/show_bug.cgi?id=1325354>
 * <https://github.com/ValveSoftware/steam-for-linux/issues/3943>
+* <https://github.com/ValveSoftware/steam-for-linux/issues/3384>
 
 The udev rules in this repository have been added to:
 
 * Debian and Ubuntu
     * [Debian bug #714399](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=714399)
-    * `joystick` package, starting on version 1.4.9-1
+    * `joystick` package ([on Debian](https://packages.debian.org/stable/utils/joystick), [on Ubuntu](https://packages.ubuntu.com/noble/joystick)), starting on version 1.4.9-1
 * Arch Linux and derivatives (such as Manjaro)
-    * [AUR package udev-joystick-blacklist](https://aur.archlinux.org/packages/udev-joystick-blacklist)
+    * [AUR package udev-joystick-blacklist-git](https://aur.archlinux.org/packages/udev-joystick-blacklist-git)
 * SDL library
     * [SDL_ShouldIgnoreJoystick() inside SDL_joystick.c](https://github.com/spurious/SDL-mirror/blob/master/src/joystick/SDL_joystick.c#L2188-L2317)
     * [Originally added only for Linux on 2017-04-06](https://github.com/spurious/SDL-mirror/commit/3b03af8b7e2c7105ffce8843fe395e6f3b2e678b)
