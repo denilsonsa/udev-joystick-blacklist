@@ -280,6 +280,8 @@ DEVICES = [
     ('2516', '0028'),  # Cooler Master Storm Alcor Mouse
 
     ('26ce', '01a2'),  # ASRock LED Controller
+
+    ('3434', '0950'),  # Keychron V5 Max System Control
 ]
 
 
