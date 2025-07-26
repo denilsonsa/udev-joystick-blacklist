@@ -423,3 +423,5 @@ SUBSYSTEM=="input", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="0109", ENV{ID_IN
 SUBSYSTEM=="input", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="0109", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="0950", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""
 SUBSYSTEM=="input", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="0950", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="3297", ATTRS{idProduct}=="1969", ENV{ID_INPUT_JOYSTICK}=="?*", ENV{ID_INPUT_JOYSTICK}=""
+SUBSYSTEM=="input", ATTRS{idVendor}=="3297", ATTRS{idProduct}=="1969", KERNEL=="js[0-9]*", RUN+="/bin/rm %E{DEVNAME}", ENV{ID_INPUT_JOYSTICK}=""
