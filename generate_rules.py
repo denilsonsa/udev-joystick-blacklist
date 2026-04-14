@@ -281,6 +281,8 @@ DEVICES = [
 
     ('26ce', '01a2'),  # ASRock LED Controller
 
+    ('3233', '1311'),  # Ducky One 3 RGB keyboard
+
     ('3434', '0109'),  # Keychron Q1
     ('3434', '0950'),  # Keychron V5 Max System Control
 ]
