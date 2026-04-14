@@ -281,14 +281,229 @@ DEVICES = [
 
     ('26ce', '01a2'),  # ASRock LED Controller
 
+    ('3233', '0009'),  # Ducky Feather mouse
+    ('3233', '000b'),  # Ducky Secret M Retro mouse
+    ('3233', '000d'),  # Ducky One 3 Pro RGB mouse
+    ('3233', '000f'),  # Ducky 75% ANSI keyboard
+    ('3233', '0015'),  # Ducky One 3 Pro Mini RGB mouse
+    ('3233', '0019'),  # Ducky One X Wireless keyboard
+    ('3233', '001a'),  # Ducky One X 2.4GHz
+    ('3233', '001d'),  # Ducky One X Mini Wireless keyboard
+    ('3233', '1011'),  # Ducky One 3 mouse
+    ('3233', '1012'),  # Ducky Origin keyboard
     ('3233', '1311'),  # Ducky One 3 RGB keyboard
+    ('3233', '1311'),  # Ducky One 3 RGB keyboard
+    ('3233', '5311'),  # Ducky One 3 SF RGB keyboard
+    ('3233', '6301'),  # Ducky One2 Mini RGB keyboard
+    ('3233', '6311'),  # Ducky One 3 Mini RGB keyboard
+    ('3233', '8011'),  # Ducky One 3 TKL keyboard
+    ('3233', '8311'),  # Ducky One 3 TKL RGB keyboard
 
-    ('3434', '0109'),  # Keychron Q1
-    ('3434', '0330'),  # Keychron V3
-    ('3434', '03a1'),  # Keychron V10
-    ('3434', '0437'),  # Keychron C3 Pro 8k
-    ('3434', '0950'),  # Keychron V5 Max System Control
-    ('3434', '0961'),  # Keychron V6 Max
+    ('3434', '0100'),  # Keychron Q1 keyboard
+    ('3434', '0101'),  # Keychron Q1 mouse
+    ('3434', '0102'),  # Keychron Q1 keyboard
+    ('3434', '0106'),  # Keychron Q1 keyboard
+    ('3434', '0107'),  # Keychron Q1 keyboard
+    ('3434', '0109'),  # Keychron Q1 keyboard
+    ('3434', '010b'),  # Keychron Q1 keyboard
+    ('3434', '0110'),  # Keychron Q2 keyboard
+    ('3434', '0111'),  # Keychron Q2 mouse
+    ('3434', '0113'),  # Keychron Q2 mouse
+    ('3434', '0120'),  # Keychron Q3 keyboard
+    ('3434', '0121'),  # Keychron Q3 mouse
+    ('3434', '0123'),  # Keychron Q3 mouse
+    ('3434', '0130'),  # Keychron Q0 keyboard
+    ('3434', '0131'),  # Keychron Q0 Plus mouse
+    ('3434', '0140'),  # Keychron Q4 mouse
+    ('3434', '0142'),  # Keychron Q4 keyboard
+    ('3434', '0150'),  # Keychron Q5 keyboard
+    ('3434', '0151'),  # Keychron Q5 mouse
+    ('3434', '0153'),  # Keychron Q5 keyboard
+    ('3434', '0160'),  # Keychron Q6 keyboard
+    ('3434', '0161'),  # Keychron Q6 keyboard
+    ('3434', '0163'),  # Keychron Q6 keyboard
+    ('3434', '0172'),  # Keychron Q7 keyboard
+    ('3434', '0180'),  # Keychron Q8 keyboard
+    ('3434', '0181'),  # Keychron Q8 keyboard
+    ('3434', '0182'),  # Keychron Q8 mouse
+    ('3434', '0183'),  # Keychron Q8 keyboard
+    ('3434', '0190'),  # Keychron Q9 keyboard
+    ('3434', '01a1'),  # Keychron Q10 mouse
+    ('3434', '01a3'),  # Keychron Q10 keyboard
+    ('3434', '01b1'),  # Keychron Q65 mouse
+    ('3434', '01d1'),  # Keychron Q12 keyboard
+    ('3434', '01e0'),  # Keychron Q11 keyboard
+    ('3434', '01e1'),  # Keychron Q11 mouse
+    ('3434', '0206'),  # Keychron K17 Pro keyboard
+    ('3434', '0207'),  # Keychron K17 Pro keyboard
+    ('3434', '0210'),  # Keychron K1 Pro mouse
+    ('3434', '0211'),  # Keychron K1 Pro keyboard
+    ('3434', '0213'),  # Keychron K1 Pro mouse
+    ('3434', '0220'),  # Keychron K2 Pro mouse
+    ('3434', '0221'),  # Keychron K2 Pro mouse
+    ('3434', '0223'),  # Keychron K2 Pro keyboard
+    ('3434', '0230'),  # Keychron K3 Pro mouse
+    ('3434', '0231'),  # Keychron K3 Pro mouse
+    ('3434', '0233'),  # Keychron K3 Pro keyboard
+    ('3434', '0234'),  # Keychron K3 Pro mouse
+    ('3434', '0240'),  # Keychron K4 Pro keyboard
+    ('3434', '0241'),  # Keychron K4 Pro keyboard
+    ('3434', '0243'),  # Keychron K4 Pro keyboard
+    ('3434', '0245'),  # Keychron K4 Pro mouse
+    ('3434', '0250'),  # Keychron K5 Pro mouse
+    ('3434', '0251'),  # Keychron K5 Pro keyboard
+    ('3434', '0253'),  # Keychron K5 Pro keyboard
+    ('3434', '0260'),  # Keychron K6 Pro keyboard
+    ('3434', '0263'),  # Keychron K6 Pro keyboard
+    ('3434', '0270'),  # Keychron K7 Pro mouse
+    ('3434', '0273'),  # Keychron K7 Pro keyboard
+    ('3434', '0280'),  # Keychron K8 Pro keyboard
+    ('3434', '0281'),  # Keychron K8 Pro keyboard
+    ('3434', '0283'),  # Keychron K8 Pro mouse
+    ('3434', '0284'),  # Keychron K8 Pro keyboard
+    ('3434', '0290'),  # Keychron K9 Pro keyboard
+    ('3434', '0293'),  # Keychron K9 Pro keyboard
+    ('3434', '02a0'),  # Keychron K10 Pro keyboard
+    ('3434', '02a1'),  # Keychron K10 Pro mouse
+    ('3434', '02a3'),  # Keychron K10 Pro mouse
+    ('3434', '02a4'),  # Keychron K10 Pro mouse
+    ('3434', '02b6'),  # Keychron K11 Pro mouse
+    ('3434', '02b9'),  # Keychron K11 Pro keyboard
+    ('3434', '02d0'),  # Keychron K13 Pro mouse
+    ('3434', '02d1'),  # Keychron K13 Pro keyboard
+    ('3434', '02d3'),  # Keychron K13 Pro keyboard
+    ('3434', '02f6'),  # Keychron K15 Pro mouse
+    ('3434', '0310'),  # Keychron V1 mouse
+    ('3434', '0311'),  # Keychron V1 mouse
+    ('3434', '0313'),  # Keychron V1 keyboard
+    ('3434', '0321'),  # Keychron V2 mouse
+    ('3434', '0330'),  # Keychron V3 keyboard
+    ('3434', '0331'),  # Keychron V3 keyboard
+    ('3434', '0333'),  # Keychron V3 keyboard
+    ('3434', '0340'),  # Keychron V4 keyboard
+    ('3434', '0342'),  # Keychron V4 mouse
+    ('3434', '0350'),  # Keychron V5 keyboard
+    ('3434', '0351'),  # Keychron V5 keyboard
+    ('3434', '0353'),  # Keychron V5 mouse
+    ('3434', '0360'),  # Keychron V6 keyboard
+    ('3434', '0361'),  # Keychron V6 mouse
+    ('3434', '0363'),  # Keychron V6 keyboard
+    ('3434', '03a1'),  # Keychron V10 mouse
+    ('3434', '03a3'),  # Keychron V10 keyboard
+    ('3434', '0410'),  # Keychron S1 keyboard
+    ('3434', '0411'),  # Keychron S1 keyboard
+    ('3434', '0430'),  # Keychron C3 Pro mouse
+    ('3434', '0431'),  # Keychron C3 Pro mouse
+    ('3434', '0433'),  # Keychron C3 Pro keyboard
+    ('3434', '0434'),  # Keychron C3 Pro mouse
+    ('3434', '0437'),  # Keychron C3 Pro 8K keyboard
+    ('3434', '0500'),  # Keychron M1 Mouse mouse
+    ('3434', '0510'),  # Keychron C1 Pro mouse
+    ('3434', '0526'),  # Keychron C2 Pro mouse
+    ('3434', '0529'),  # Keychron C2 Pro keyboard
+    ('3434', '0610'),  # Keychron Q1 Pro keyboard
+    ('3434', '0611'),  # Keychron Q1 Pro keyboard
+    ('3434', '0620'),  # Keychron Q2 Pro keyboard
+    ('3434', '0621'),  # Keychron Q2 Pro keyboard
+    ('3434', '0630'),  # Keychron Q3 Pro mouse
+    ('3434', '0631'),  # Keychron Q3 Pro keyboard
+    ('3434', '0650'),  # Keychron Q5 Pro keyboard
+    ('3434', '0660'),  # Keychron Q6 Pro mouse
+    ('3434', '0661'),  # Keychron Q6 Pro mouse
+    ('3434', '0680'),  # Keychron Q8 Pro mouse
+    ('3434', '06a0'),  # Keychron Q10 Pro keyboard
+    ('3434', '06d0'),  # Keychron Q13 Pro keyboard
+    ('3434', '0711'),  # Keychron B1 Pro mouse
+    ('3434', '0761'),  # Keychron B6 Pro keyboard
+    ('3434', '07f0'),  # Keychron B33 keyboard
+    ('3434', '0800'),  # Keychron Q0 Max mouse
+    ('3434', '0810'),  # Keychron Q1 Max keyboard
+    ('3434', '0811'),  # Keychron Q1 Max keyboard
+    ('3434', '0820'),  # Keychron Q2 Max keyboard
+    ('3434', '0830'),  # Keychron Q3 Max keyboard
+    ('3434', '0831'),  # Keychron Q3 Max mouse
+    ('3434', '0850'),  # Keychron Q5 Max mouse
+    ('3434', '0851'),  # Keychron Q5 Max mouse
+    ('3434', '0860'),  # Keychron Q6 Max keyboard
+    ('3434', '0861'),  # Keychron Q6 Max mouse
+    ('3434', '08c0'),  # Keychron Q60 Max keyboard
+    ('3434', '08c3'),  # Keychron Q12 Max keyboard
+    ('3434', '08d0'),  # Keychron Q13 Max keyboard
+    ('3434', '08f0'),  # Keychron Q15 Max mouse
+    ('3434', '0913'),  # Keychron V1 Max mouse
+    ('3434', '0914'),  # Keychron V1 Max mouse
+    ('3434', '0933'),  # Keychron V3 Max mouse
+    ('3434', '0934'),  # Keychron V3 Max keyboard
+    ('3434', '0950'),  # Keychron V5 Max keyboard
+    ('3434', '0951'),  # Keychron V5 Max keyboard
+    ('3434', '0960'),  # Keychron V6 Max mouse
+    ('3434', '0961'),  # Keychron V6 Max keyboard
+    ('3434', '09a0'),  # Keychron V10 Max mouse
+    ('3434', '0a03'),  # Keychron K17 Max mouse
+    ('3434', '0a04'),  # Keychron K17 Max mouse
+    ('3434', '0a06'),  # Keychron K0 Max keyboard
+    ('3434', '0a10'),  # Keychron K1 Max keyboard
+    ('3434', '0a30'),  # Keychron K3 Max mouse
+    ('3434', '0a31'),  # Keychron K3 Max keyboard
+    ('3434', '0a32'),  # Keychron K3 Max keyboard
+    ('3434', '0a33'),  # Keychron K3 Max keyboard
+    ('3434', '0a38'),  # Keychron K3 Max mouse
+    ('3434', '0a50'),  # Keychron K5 Max mouse
+    ('3434', '0a51'),  # Keychron K5 Max keyboard
+    ('3434', '0a53'),  # Keychron K5 Max keyboard
+    ('3434', '0a70'),  # Keychron K7 Max mouse
+    ('3434', '0a80'),  # Keychron K8 Max keyboard
+    ('3434', '0aa0'),  # Keychron K10 Max mouse
+    ('3434', '0aa1'),  # Keychron K10 Max keyboard
+    ('3434', '0ab3'),  # Keychron K11 Max mouse
+    ('3434', '0ad0'),  # Keychron K13 Max keyboard
+    ('3434', '0af3'),  # Keychron K15 Max mouse
+    ('3434', '0b10'),  # Keychron Q1 HE keyboard
+    ('3434', '0b11'),  # Keychron Q1 HE keyboard
+    ('3434', '0b30'),  # Keychron Q3 HE keyboard
+    ('3434', '0b60'),  # Keychron Q6 HE keyboard
+    ('3434', '0d10'),  # Keychron K1 Version 6 keyboard
+    ('3434', '0d20'),  # Keychron K2 Version 3 mouse
+    ('3434', '0d23'),  # Keychron K2 Version 3 keyboard
+    ('3434', '0d30'),  # Keychron K3 Version 3 mouse
+    ('3434', '0d31'),  # Keychron K3 Version 3 mouse
+    ('3434', '0d33'),  # Keychron K3 Version 3 keyboard
+    ('3434', '0d34'),  # Keychron K3 Version 3 mouse
+    ('3434', '0d50'),  # Keychron K5 Version 2 keyboard
+    ('3434', '0d51'),  # Keychron K5 Version 2 mouse
+    ('3434', '0d80'),  # Keychron K8 Version 2 mouse
+    ('3434', '0da0'),  # Keychron K10 Version 2 mouse
+    ('3434', '0da1'),  # Keychron K10 Version 2 mouse
+    ('3434', '0da3'),  # Keychron K10 Version 2 keyboard
+    ('3434', '0e20'),  # Keychron K2 HE keyboard
+    ('3434', '0e21'),  # Keychron K2 HE keyboard
+    ('3434', '0e40'),  # Keychron K4 HE keyboard
+    ('3434', '0ea0'),  # Keychron K10 HE keyboard
+    ('3434', '11a3'),  # Keychron K10 keyboard
+    ('3434', 'd026'),  # Keychron Link-KM keyboard
+    ('3434', 'd027'),  # Keychron Receiver keyboard
+    ('3434', 'd028'),  # Keychron Ultra-Link 8K mouse
+    ('3434', 'd030'),  # Keychron Link keyboard
+    ('3434', 'd031'),  # Keychron Link keyboard
+    ('3434', 'd033'),  # Keychron M3 keyboard
+    ('3434', 'd035'),  # Keychron M1 mouse
+    ('3434', 'd036'),  # Keychron M3 mini mouse
+    ('3434', 'd038'),  # Keychron 4K Link mouse
+    ('3434', 'd03f'),  # Keychron M6 mouse
+    ('3434', 'd040'),  # Keychron M4 mouse
+    ('3434', 'd041'),  # Keychron M3 mini 4K mouse
+    ('3434', 'd044'),  # Keychron M7 mouse
+    ('3434', 'd045'),  # Keychron M2 4K mouse
+    ('3434', 'd046'),  # Keychron M6 4K mouse
+    ('3434', 'd048'),  # Keychron M5 8K keyboard
+    ('3434', 'd049'),  # Keychron M6 8K keyboard
+    ('3434', 'd04c'),  # Keychron M3 mouse
+    ('3434', 'd04e'),  # Keychron M3 keyboard
+    ('3434', 'd060'),  # Keychron M6 keyboard
+    ('3434', 'fe06'),  # Keychron K4v2 RGB keyboard
+    ('3434', 'fe0a'),  # Keychron K6 RGB keyboard
+    ('3434', 'fe0e'),  # Keychron K8 RGB keyboard
+    ('3434', 'fe0f'),  # Keychron K8 RGB keyboard
 ]
 
 
