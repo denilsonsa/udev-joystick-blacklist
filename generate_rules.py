@@ -299,6 +299,15 @@ DEVICES = [
     ('3233', '8011'),  # Ducky One 3 TKL keyboard
     ('3233', '8311'),  # Ducky One 3 TKL RGB keyboard
 
+    ('3297', '1969'),  # ZSA Technology Labs Moonlander Mark I keyboard
+    ('3297', '1977'),  # ZSA Technology Labs Voyager keyboard
+    ('3297', '2010'),  # ZSA Technology Labs Ergodox EZ mouse
+    ('3297', '4974'),  # ZSA Technology Labs Ergodox EZ mouse
+    ('3297', '4975'),  # ZSA Technology Labs Ergodox EZ keyboard
+    ('3297', '4976'),  # ZSA Technology Labs Ergodox EZ mouse
+    ('3297', 'c6ce'),  # ZSA Technology Labs Planck EZ keyboard
+    ('3297', 'c6cf'),  # ZSA Technology Labs Planck EZ Glow keyboard
+
     ('3434', '0100'),  # Keychron Q1 keyboard
     ('3434', '0101'),  # Keychron Q1 mouse
     ('3434', '0102'),  # Keychron Q1 keyboard
