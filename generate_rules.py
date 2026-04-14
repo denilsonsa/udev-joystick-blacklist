@@ -285,6 +285,10 @@ DEVICES = [
 
     ('3434', '0109'),  # Keychron Q1
     ('3434', '0950'),  # Keychron V5 Max System Control
+    ('3434', '0330'),  # Keychron V3
+    ('3434', '0961'),  # Keychron V6 Max
+    ('3434', '0437'),  # Keychron C3 Pro 8k
+    ('3434', '03a1'),  # Keychron V10
 ]
 
 
