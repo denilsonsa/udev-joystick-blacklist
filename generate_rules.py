@@ -56,6 +56,7 @@ DEVICES = [
     ('046d', 'c30a'),  # Logitech, Inc. iTouch Composite keboard
 
     ('04d9', '8009'),  # OBINS ANNE PRO 2 keyboard (Holtek Semiconductor USB-HID Keyboard)
+    ('ac20', '8009'),  # OBINS ANNE PRO 2 keyboard (QKM)
     ('04d9', 'a0df'),  # Tek Syndicate Mouse (E-Signal USB Gaming Mouse)
 
     # List of Wacom devices at: https://github.com/linuxwacom/input-wacom/wiki/Device-IDs
